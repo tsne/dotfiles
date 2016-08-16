@@ -1,0 +1,30 @@
+setenv GOPATH $HOME/dev/go
+setenv PATH /usr/local/bin:`go env GOROOT`/bin:$GOPATH/bin:$PATH
+
+set prompt='%{\033[1;32m%}%c03%{\033[0m%} %B%#%b '
+set color
+
+setenv CLICOLOR 1
+setenv LSCOLORS dxxxxxxxbxxxxxbxbxdxdx
+setenv LS_COLORS di=33:ex=31
+setenv LESSHISTFILE -
+
+alias ls ls -F
+alias la ls -a
+
+
+if ($?prompt) then
+	set savehist=(100 merge)
+	set histfile=~/.tmp/tcsh/history
+	set histdup='prev'
+	set autoexpand
+	set autolist='ambiguous'
+
+	bindkey -k down history-search-forward
+	bindkey -k up history-search-backward
+
+	set __git_commands = (add bisect blame branch checkout clone commit config diff diff-files difftool fetch grep gui init log merge mv pull push rebase reset rm show shortlog stash status tag)
+	complete cd 'C/*/d/'
+	complete kill 'c/-/S/'
+	complete git 'p/1/$__git_commands/' 'n/help/$__git_commands/'
+endif
