@@ -1,6 +1,6 @@
 [user]
 	name = tsne
-	email = tnse@example.com
+	email = tsne@example.com
 
 [color]
 	ui = true
@@ -18,8 +18,8 @@
 [color "diff"]
 	meta = yellow
 	frag = magenta bold
-	old = red reverse
-	new = green reverse
+	old = red
+	new = green
 	whitespace = red reverse
 
 [push]
