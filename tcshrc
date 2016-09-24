@@ -24,7 +24,9 @@ if ($?prompt) then
 	bindkey -k up history-search-backward
 
 	set __git_commands = (add bisect blame branch checkout clone commit config diff diff-files difftool fetch grep gui init log merge mv pull push rebase reset rm show shortlog stash status tag)
+	set __go_commands = (build run test)
 	complete cd 'C/*/d/'
 	complete kill 'c/-/S/'
 	complete git 'p/1/$__git_commands/' 'n/help/$__git_commands/'
+	complete go 'p/1/$__go_commands/' 'n/help/$__go_commands/'
 endif
