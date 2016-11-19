@@ -30,9 +30,11 @@ compinit
 
 setopt NO_BEEP
 setopt NO_AUTO_MENU
+setopt NO_AUTO_REMOVE_SLASH
 
 zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' cache-path ~/.tmp/zsh/cache
 zstyle ':completion::complete:*' use-cache on
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' verbose false
