@@ -38,3 +38,6 @@ zstyle ':completion::complete:*' use-cache on
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' verbose false
+
+# nodenv
+alias enable-nodenv='export NODENV_ROOT=/usr/local/var/nodenv && eval "$(nodenv init -)"'
