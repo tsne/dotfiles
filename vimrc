@@ -19,11 +19,12 @@ set tabstop=4
 set shiftwidth=4
 set display=lastline
 set backspace=indent,eol,start
+set listchars=tab:»\ ,trail:·,nbsp:␣
 set complete-=i		" could be slow
 set completeopt-=preview
 
-set directory=~/.tmp/vim/swp/
-set viminfo+=n~/.tmp/vim/viminfo
+set directory=~/.cache/vim/swp/
+set viminfo+=n~/.cache/vim/viminfo
 
 set guioptions-=T
 set guioptions-=L
@@ -51,7 +52,7 @@ vnoremap > >gv
 let mapleader=','
 
 " plugin settings
-let g:netrw_home = expand('~/.tmp/vim')
+let g:netrw_home = expand('~/.cache/vim')
 
 let g:vimfiler_tree_leaf_icon = ' '
 let g:vimfiler_file_icon = ' '
