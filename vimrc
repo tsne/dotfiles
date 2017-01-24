@@ -26,6 +26,8 @@ set completeopt-=preview
 set directory=~/.cache/vim/swp/
 set viminfo+=n~/.cache/vim/viminfo
 
+set grepprg=grep\ -Hrn\ --exclude-dir={node_modules,dist}
+
 set guioptions-=T
 set guioptions-=L
 set guifont=Consolas:h12,Courier\ New:h12
@@ -43,10 +45,6 @@ scriptencoding utf-8
 filetype plugin indent on
 syntax on
 color greenimal
-
-" mappings
-vnoremap < <gv
-vnoremap > >gv
 
 " vim settings
 let mapleader=','
@@ -83,4 +81,10 @@ au FileType go nmap <Leader>d <Plug>(go-def)
 au FileType go nmap <Leader>i <Plug>(go-info)
 
 " key mappings
+vnoremap < <gv
+vnoremap > >gv
+
 noremap <C-f> :VimFiler<CR>
+
+" commands
+command! -nargs=+ Grep sil! grep! <args> . | copen
