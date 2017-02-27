@@ -31,6 +31,7 @@ compinit
 setopt NO_BEEP
 setopt NO_AUTO_MENU
 setopt NO_AUTO_REMOVE_SLASH
+setopt RM_STAR_SILENT
 
 zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' cache-path ~/.tmp/zsh/cache
