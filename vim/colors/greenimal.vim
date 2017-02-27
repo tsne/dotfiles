@@ -96,6 +96,7 @@ let s:scheme = {
 \	'Boolean':        {'guifg': s:keywords.gui, 'ctermfg': s:keywords.term},
 \	'Identifier':     {'guifg': 'foreground', 'ctermfg': s:fg.term},
 \	'Statement':      {'guifg': s:keywords.gui, 'ctermfg': s:keywords.term},
+\	'Operator':       {'guifg': 'foreground', 'ctermfg': s:fg.term},
 \	'PreProc':        {'guifg': s:keywords.gui, 'gui': 'none', 'ctermfg': s:keywords.term, 'cterm': 'none'},
 \	'Type':           {'guifg': s:keywords.gui, 'gui': 'none', 'ctermfg': s:keywords.term, 'cterm': 'none'},
 \	'Special':        {'guifg': 'foreground', 'ctermfg': s:fg.term},

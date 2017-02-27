@@ -87,4 +87,4 @@ vnoremap > >gv
 noremap <C-f> :VimFiler<CR>
 
 " commands
-command! -nargs=+ Grep sil! grep! <args> . | copen
+command! -nargs=+ Grep sil! grep! <args> | copen
