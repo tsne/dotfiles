@@ -15,7 +15,7 @@ setopt NO_CORRECT
 # history
 HISTSIZE=300
 SAVEHIST=$HISTSIZE
-HISTFILE='~/.tmp/zsh/history'
+HISTFILE=$HOME/.cache/zsh/history
 setopt APPEND_HISTORY
 
 autoload -U history-search-end
