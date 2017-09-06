@@ -14,8 +14,9 @@ setopt NO_CORRECT
 
 # history
 HISTSIZE=300
-SAVEHIST=$HISTSIZE
 HISTFILE=$HOME/.cache/zsh/history
+SAVEHIST=$HISTSIZE
+setopt HIST_IGNORE_DUPS
 setopt APPEND_HISTORY
 
 autoload -U history-search-end
