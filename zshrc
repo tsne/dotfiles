@@ -1,5 +1,6 @@
 export GOPATH=$HOME/dev/go
 export PATH=/usr/local/bin:`go env GOROOT`/bin:$GOPATH/bin:$PATH
+export GOGITHUBPATH=$GOPATH/src/github.com
 
 export CLICOLOR=1
 export LSCOLORS=dxxxxxxxbxxxxxbxbxdxdx
