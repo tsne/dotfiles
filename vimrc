@@ -74,6 +74,7 @@ call vimfiler#custom#profile('default', 'context', {
 	\ })
 
 au FileType qf wincmd J " open QuickFix horizontally
+au FileType markdown setlocal wrap linebreak
 au FileType go nmap <Leader>r <Plug>(go-rename)
 au FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 au FileType go nmap <Leader>a <Plug>(go-alternate-edit)
