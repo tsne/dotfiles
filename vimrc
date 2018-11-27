@@ -23,8 +23,8 @@ set listchars=tab:»\ ,trail:·,nbsp:␣
 set complete-=i		" could be slow
 set completeopt-=preview
 
-set directory=~/.cache/vim/swp/
-set viminfo+=n~/.cache/vim/viminfo
+set directory=~/.vim/cache/swp/
+set viminfo+=n~/.vim/cache/viminfo
 
 set grepprg=grep\ -Hrn\ --exclude-dir={node_modules,dist}
 
