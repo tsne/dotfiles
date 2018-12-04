@@ -47,7 +47,7 @@ zstyle ':completion:*' verbose false
 __git_files() { _wanted files expl 'local files' _files }
 
 # nodenv
-alias enable-nodenv='export NODENV_ROOT=/usr/local/var/nodenv && eval "$(nodenv init -)"'
+alias enable-nodenv='eval "$(nodenv init -)"'
 
 # totp
 totp() { oathtool --totp -b "$(cat $HOME/.totp/$1)" | pbcopy; }
