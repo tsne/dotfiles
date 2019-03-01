@@ -10,16 +10,20 @@ export LESSHISTFILE=-
 
 alias ls='ls -F'
 alias la='ls -a'
+alias k='kubectl'
 
 PROMPT='%B%F{green}%30<..<%~%f %#%b '
 setopt NO_CORRECT
 
 # history
-HISTSIZE=300
+HISTSIZE=5000
 HISTFILE=$HOME/.cache/zsh/history
 SAVEHIST=$HISTSIZE
 setopt HIST_IGNORE_DUPS
 setopt APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_SPACE
 
 autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end

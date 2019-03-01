@@ -6,7 +6,7 @@ syn case match
 
 syn keyword mprotPackage    package
 syn keyword mprotImport     import
-syn keyword mprotDeclType   const enum struct union
+syn keyword mprotDeclType   const enum struct union service
 syn keyword mprotNativeType bool int int8 int16 int32 int64 uint uint8 uint16 uint32 uint64 float32 float64 string bytes map time raw
 
 " strings

@@ -1,5 +1,9 @@
 # dotfiles
 
+```shell
+mkdir -p $HOME/.cache/zsh
+```
+
 ## vim
 ```shell
 > cd vim/bundle
