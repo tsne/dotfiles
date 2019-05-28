@@ -10,7 +10,6 @@ export LESSHISTFILE=-
 
 alias ls='ls -F'
 alias la='ls -a'
-alias k='kubectl'
 
 PROMPT='%B%F{green}%30<..<%~%f %#%b '
 setopt NO_CORRECT
@@ -55,3 +54,7 @@ alias enable-nodenv='eval "$(nodenv init -)"'
 
 # totp
 totp() { oathtool --totp -b "$(cat $HOME/.totp/$1)" | pbcopy; }
+
+# kubernetes
+alias k='kubectl'
+kctx() { if [ -n "$1" ]; then kubectl config use-context $1; else kubectl config current-context; fi; }
