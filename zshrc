@@ -2,6 +2,8 @@ export LC_ALL=en_US.UTF-8
 export GOPATH=$HOME/dev/go
 export PATH=/usr/local/bin:`go env GOROOT`/bin:$GOPATH/bin:$PATH
 export GOGITHUBPATH=$GOPATH/src/github.com
+export GOPRIVATE=github.com/lovoo/*
+export GOPROXY=direct
 
 export CLICOLOR=1
 export LSCOLORS=dxxxxxxxbxxxxxbxbxdxdx
@@ -19,10 +21,9 @@ HISTSIZE=5000
 HISTFILE=$HOME/.cache/zsh/history
 SAVEHIST=$HISTSIZE
 setopt HIST_IGNORE_DUPS
-setopt APPEND_HISTORY
-setopt SHARE_HISTORY
-setopt INC_APPEND_HISTORY
+setopt HIST_REDUCE_BLANKS
 setopt HIST_IGNORE_SPACE
+setopt SHARE_HISTORY
 
 autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end
@@ -57,4 +58,4 @@ totp() { oathtool --totp -b "$(cat $HOME/.totp/$1)" | pbcopy; }
 
 # kubernetes
 alias k='kubectl'
-kctx() { if [ -n "$1" ]; then kubectl config use-context $1; else kubectl config current-context; fi; }
+ktx() { if [ -n "$1" ]; then kubectl config use-context $1; else kubectl config current-context; fi; }
