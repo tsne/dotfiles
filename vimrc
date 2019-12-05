@@ -59,15 +59,10 @@ let g:vimfiler_tree_closed_icon = '▸'
 let g:vimfiler_readonly_file_icon = '✗'
 let g:vimfiler_marked_file_icon = '✓'
 
-let g:go_highlight_functions = 0
-let g:go_highlight_methods = 0
-let g:go_highlight_types = 0
-let g:go_highlight_operators = 0
-let g:go_highlight_extra_types = 0
-let g:go_fmt_autosave = 1
+let g:go_code_completion_enabled = 0
 let g:go_fmt_command = 'goimports'
+let g:go_template_use_pkg = 1
 let g:go_def_mapping_enabled = 0
-let g:go_autodetect_gopath = 0
 
 call vimfiler#custom#profile('default', 'context', {
 	\ 'safe': 0,
