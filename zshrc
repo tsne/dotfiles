@@ -58,4 +58,4 @@ totp() { oathtool --totp -b "$(cat $HOME/.totp/$1)" | pbcopy; }
 
 # kubernetes
 alias k='kubectl'
-ktx() { if [ -n "$1" ]; then kubectl config use-context $1; else kubectl config current-context; fi; }
+kx() { if [ -n "$1" ]; then kubectl config use-context $1; else kubectl config current-context; fi; }
