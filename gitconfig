@@ -22,6 +22,9 @@
 	new = green
 	whitespace = red reverse
 
+[pull]
+	rebase = true
+
 [push]
 	default = simple
 
